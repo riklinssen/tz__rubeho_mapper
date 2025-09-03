@@ -16,36 +16,6 @@ sys.path.insert(0, str(project_root))
 
 from config.settings import *
 
-# print(f"Current working directory: {Path.cwd()}")
-# print(f"Script location (__file__): {__file__}")
-
-# script_dir = Path(__file__).parent
-# project_root = script_dir.parent
-
-# print(f"Script directory: {script_dir}")
-# print(f"Project root: {project_root}")
-# print(f"Config folder exists: {(project_root / 'config').exists()}")
-# print(f"Settings.py exists: {(project_root / 'config' / 'settings.py').exists()}")
-# print(f"Current sys.path: {sys.path[:3]}")  # Show first 3 entries
-
-# # Add project root to path
-# sys.path.insert(0, str(project_root))
-# print(f"Added to sys.path: {project_root}")
-
-# try:
-#     from config.settings import *
-#     print("Import successful!")
-# except ImportError as e:
-#     print(f"Import failed: {e}")
-#     # Try alternative import
-#     try:
-#         import config.settings as settings
-#         TARGET_CRS = settings.TARGET_CRS
-#         WEB_CRS = settings.WEB_CRS
-#         print("Alternative import successful!")
-#     except ImportError as e2:
-#         print(f"Alternative import also failed: {e2}")
-
 
 # %%
 print(f"Target CRS: {TARGET_CRS}")
@@ -67,7 +37,7 @@ shapefile_dir = RAW_DATA_DIR / "ALL WARDS TANZANIA"
 shp_files = list(shapefile_dir.glob("*.shp"))
 if shp_files:
     shp_file = shp_files[0]  # Take the first .shp file found
-
+print(shapefile_dir)
 
 # %%
 if shp_files:
